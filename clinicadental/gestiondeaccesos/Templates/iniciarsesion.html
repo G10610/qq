@@ -2,17 +2,15 @@
 
 {% block content %}
 
+<h1>Iniciar Sesion</h1>
 
+{{error}}
 
-
-<h1>Signup</h1>
-
-{{ error }}
-<form method="POST">
+<form  method="POST">
     {% csrf_token %}
     {{form.as_p}}
     <button>
-        Signup
+        Iniciar
     </button>
 </form>
 

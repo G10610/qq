@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMDentis Administración </title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="/">HOME</a>
+            </li>
+            <li>
+                <a href="/index">index</a>
+            </li>
+            {% if user.is_authenticated %}
+            <li>
+                <a href="/salir">CerrarSesion</a>
+            </li>
+            {% else %}
+            <li>
+                <a href="/signup">Registrarse</a>
+            </li>
+             <li>
+                <a href="/iniciarsesion">Iniciar Sesion</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+
+</html>
