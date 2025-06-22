@@ -6,11 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MMDentis Administración </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/custom.css">   
 </head>
 
 <body>
-
 
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container">
@@ -26,24 +24,19 @@
                         <a class="nav-link" href="/">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'crudpacientes' %}">Pacientes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'crudempleados' %}">Empleados</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'crudespecialistas' %}">Especialistas</a>
+                        <a class="nav-link" href="{% url 'crearpacientes' %}">Crear Pacientes</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'logout' %}">Cerrar Sesion</a>
                     </li>
-                    {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'signup' %}">Registrarse</a>
+
+
+                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'lista' %}">Lista de pacientes</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'login' %}">Iniciar Sesion</a>
-                    </li>
+
+
+                    
                     {% endif %}
                 </ul>
             </div>
